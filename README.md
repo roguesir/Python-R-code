@@ -1,5 +1,5 @@
-A python practice
-Content:
+A python practice\n
+Content:\n
 	a)matplotlib_practice
 	b)theano_practice
 	c)tensorflow_practice
