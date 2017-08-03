@@ -116,13 +116,3 @@ with tf.Session as sess:
 
 				observation = env.reset()
 
-
-
-
-
-
-
-
-
-
-
