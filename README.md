@@ -1,8 +1,9 @@
-### A python practice
+# A python practice
+
 ### Content:
-	a)matplotlib_practice
-	b)theano_practice
-	c)tensorflow_practice
-	d)keras_practice
-	e)Pytorch_practice
-	f)reinforcement_learning
+- Keras_practice
+- Matplotlib_practice
+- Pytorch_practice
+- Reinforcement_learning
+- Theano_practice
+- Tensorflow_practice
