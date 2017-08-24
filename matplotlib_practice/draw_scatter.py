@@ -1,4 +1,5 @@
 import numpy as np 
+import matplotlib as plt
 
 n = 1024
 X = np.random.normal(0,1,n)
