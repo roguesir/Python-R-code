@@ -37,11 +37,5 @@ plt.plot([0, 1], [0, 1])
 plt.title('block2')
 plt.yticks([0, 0.25, 0.5, 0.75, 1],
            [' ', ' ', ' ', ' ', ' '])
-
-
-
-
-
-
 #plt.tight_layout()
 plt.show()
