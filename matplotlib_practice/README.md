@@ -5,6 +5,7 @@
 - Draw bar
 
 - Draw line
+
 https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/draw_line.png
 
 - Draw contours
