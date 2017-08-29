@@ -13,3 +13,5 @@
 - Draw 3D image
 
 - Draw maltiplot
+
+![Result Pic](https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/mal_plot.png)
