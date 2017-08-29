@@ -1,3 +1,8 @@
+
+
+
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -33,9 +38,19 @@ plt.legend()
 # plt.subplot(n_rows, n_cols, plot_num)
 plt.subplot(1, 2, 2)
 # figure splits into 2 rows, 1 col, plot to the 1st sub-fig
-plt.plot([0, 1], [0, 1])
-plt.title('block2')
-plt.yticks([0, 0.25, 0.5, 0.75, 1],
-           [' ', ' ', ' ', ' ', ' '])
+#plt.plot([0, 1], [0, 1])
+#plt.title('block2')
+#plt.yticks([0, 0.25, 0.5, 0.75, 1],
+#           [' ', ' ', ' ', ' ', ' '])
 #plt.tight_layout()
+x = np.linspace(0, 3, 100)
+for i in xrange(5):
+    plt.figure(1)  
+    plt.plot(x, np.exp(i*x/3))
 plt.show()
+
+
+
+
+
+
