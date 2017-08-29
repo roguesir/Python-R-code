@@ -2,13 +2,19 @@
 
 - Draw scatter
 
+![Result Pic](https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/draw_scatter.png)
+
 - Draw bar
+
+![Result Pic](https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/draw_bar.png)
 
 - Draw line
 
 ![Result Pic](https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/draw_line.png)
 
 - Draw contours
+
+![Result Pic](https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/draw_contours.png)
 
 - Draw 3D image
 
