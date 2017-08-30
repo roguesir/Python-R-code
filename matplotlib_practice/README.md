@@ -21,3 +21,7 @@
 - Draw maltiplot
 
 ![Result Pic](https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/mal_plot.png)
+
+- Draw piecewise function
+
+![Result Pic](https://github.com/roguesir/Python-practice/blob/master/matplotlib_practice/draw_piecewise_function.png)
