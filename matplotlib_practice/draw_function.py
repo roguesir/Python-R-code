@@ -11,7 +11,4 @@ for i in lambda0:
 		plt.plot(x, 11+(20*np.exp(-i*x)-h*x)/2,label='lambda='+str(i)+' h='+str(h))
 
 plt.legend()
-
-
-
 plt.show()
