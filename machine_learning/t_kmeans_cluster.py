@@ -1,3 +1,12 @@
+# coding:utf-8
+
+"""
+Author: roguesir
+Date: 2017/8/30
+GitHub: https://roguesir.github.com
+Blog: http://blog.csdn.net/roguesir
+"""
+
 import numpy as np 
  
 x1 = np.array([1, 2, 3, 1, 5, 6, 5, 5, 6, 7, 8, 9, 9])  
