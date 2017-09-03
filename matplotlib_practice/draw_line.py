@@ -1,3 +1,12 @@
+# coding:utf-8
+
+"""
+Author: roguesir
+Date: 2017/8/30
+GitHub: https://roguesir.github.com
+Blog: http://blog.csdn.net/roguesir
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt  
 x1=[20,33,51,79,101,121,132,145,162,182,203,219,232,243,256,270,287,310,325]
