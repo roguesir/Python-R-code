@@ -1,3 +1,12 @@
+# coding:utf-8
+
+"""
+Author: roguesir
+Date: 2017/8/30
+GitHub: https://roguesir.github.com
+Blog: http://blog.csdn.net/roguesir
+"""
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import datasets
 import numpy as np
