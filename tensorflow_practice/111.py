@@ -1,3 +1,12 @@
+# coding:utf-8
+
+"""
+Author: roguesir
+Date: 2017/8/30
+GitHub: https://roguesir.github.com
+Blog: http://blog.csdn.net/roguesir
+"""
+
 import tensorflow as tf 
 import numpy as np 
 from tensorflow.examples.tutorials.mnist import input_data
