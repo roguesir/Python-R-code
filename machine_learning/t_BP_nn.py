@@ -1,3 +1,12 @@
+# coding:utf-8
+
+"""
+Author: roguesir
+Date: 2017/8/30
+GitHub: https://roguesir.github.com
+Blog: http://blog.csdn.net/roguesir
+"""
+
 from __future__ import print_function
 import tensorflow as tf
 import numpy as np
