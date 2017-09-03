@@ -1,18 +1,11 @@
+# coding:utf-8
+
 """
-To know more or get code samples, please visit my website:
-https://morvanzhou.github.io/tutorials/
-Or search: Python
-Thank you for supporting!
+Author: roguesir
+Date: 2017/8/30
+GitHub: https://roguesir.github.com
+Blog: http://blog.csdn.net/roguesir
 """
-
-# please note, all tutorial code are running under python3.5.
-# If you use the version like python2.7, please modify the code accordingly
-
-# 8 - RNN Classifier example
-
-# to try tensorflow, un-comment following two lines
-# import os
-# os.environ['KERAS_BACKEND']='tensorflow'
 
 import numpy as np
 np.random.seed(1337)  # for reproducibility
