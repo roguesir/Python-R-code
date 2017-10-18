@@ -1,11 +1,11 @@
 # A python practice
 
 ### Content:
-- ！[Python_note](https://github.com/roguesir/Python-practice/blob/master/python_note/Python_basic.pdf)
+- ![Python_note](https://github.com/roguesir/Python-practice/blob/master/python_note/Python_basic.pdf)
 
 A note about the basic of python programming.
 
-- ！[Python_basic](https://github.com/roguesir/Python-practice/tree/master/python_basic)
+- ![Python_basic](https://github.com/roguesir/Python-practice/tree/master/python_basic)
 
 Contained file read: csv, excel, txt, json et.al
 
