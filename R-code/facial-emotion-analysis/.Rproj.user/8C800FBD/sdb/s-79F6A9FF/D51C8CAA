@@ -1,0 +1,18 @@
+{
+    "contents" : "import httplib\nimport urllib\nimport base64\nimport json\nimport pandas as pd\nimport numpy as np\nimport requests\n\n# you have to sign up for an API key, which has some allowances. Check the API documentation for further details:\n_url = 'https://api.projectoxford.ai/emotion/v1.0/recognizeInVideo'\n_key = '89b3bff2899448c399ca0894d48256cc' #Here you have to paste your primary key\n_maxNumRetries = 10\n\n# URL direction: I hosted this on my domain\nurlVideo = 'http://datacandy.co.uk/blog2.mp4'\n\n# Computer Vision parameters\nparamsPost = { 'outputStyle' : 'perFrame'}\n\nheadersPost = dict()\nheadersPost['Ocp-Apim-Subscription-Key'] = _key\nheadersPost['Content-Type'] = 'application/json'\n\njsonPost = { 'url': urlVideo }\n\nresponsePost = requests.request( 'post', _url, json = jsonPost, data = None, headers = headersPost, params = paramsPost )\n\nif responsePost.status_code == 202: # everything went well!\n    videoIDLocation = responsePost.headers['Operation-Location']\n    print videoIDLocation\n    \n ## Wait a bit, it's processing\nheadersGet = dict()\nheadersGet['Ocp-Apim-Subscription-Key'] = _key\n\njsonGet = {}\nparamsGet = urllib.urlencode({})\ngetResponse = requests.request( 'get', videoIDLocation, json = jsonGet,\\\n                                  data = None, headers = headersGet, params = paramsGet )\n\nrawData = json.loads(json.loads(getResponse.text)['processingResult'])\ntimeScale = rawData['timescale']\nframeRate = rawData['framerate']\n\nemotionPerFramePerFace = {}\ncurrFrameNum = 0\n\nfor currFragment in rawData['fragments']:\n    for currEvent in currFragment['events']:\n        emotionPerFramePerFace[currFrameNum] = currEvent\n        currFrameNum += 1\n\n\n # Data collection\nperson1, person2  = [], []\nfor frame_no, v in emotionPerFramePerFace.copy().items():\n    for i, minidict in enumerate(v):\n        for k, v in minidict['scores'].items():\n            minidict[k] = v\n\n        minidict['frame'] = frame_no\n        if i == 0:\n            person1.append(minidict)\n        else:\n            person2.append(minidict)\n\n\ndf1 = pd.DataFrame(person1)\ndf2 = pd.DataFrame(person2)\ndel df1['scores']\ndel df2['scores']\n\n# Saving in pd data-frame format:\ndf1.to_csv(\"/your/file/path/trump.csv\", index=False)\ndf2.to_csv(\"/your/file/path/clinton.csv\", index=False)\n",
+    "created" : 1477479106476.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4090770712",
+    "id" : "D51C8CAA",
+    "lastKnownWriteTime" : 1477486802,
+    "path" : "~/R/face recognition/face recognition.py",
+    "project_path" : "face recognition.py",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "python"
+}

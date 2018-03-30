@@ -1,0 +1,18 @@
+{
+    "contents" : "library(\"httr\")\nlibrary(\"XML\")\nlibrary(\"stringr\")\nlibrary(\"ggplot2\")\n\n# Define image source\nimg.url = 'https://assets.donaldjtrump.com/site/about_body_img_2.jpg'\n\n# Define Microsoft API URL to request data\nURL.emoface = 'https://api.projectoxford.ai/emotion/v1.0/recognize'\n\n# Define access key (access key is available via: https://www.microsoft.com/cognitive-services/en-us/emotion-api)\nemotionKEY = '89b3bff2899448c399ca0894d48256cc'\n\nmybody = list(url = img.url)\n\n# Request data from Microsoft\nfaceEMO = POST(\n  url = URL.emoface,\n  content_type('application/json'), add_headers(.headers = c('Ocp-Apim-Subscription-Key' = emotionKEY)),\n  body = mybody,\n  encode = 'json'\n)\n\n# Show request results (if Status=200, request is okay)\nfaceEMO\n\n# Reuqest results from face analysis\nObama = httr::content(faceEMO)[[1]]\nObama\n# Define results in data frame\no<-as.data.frame(as.matrix(Obama$scores))\n\n# Make some transformation\no$V1 <- lapply(strsplit(as.character(o$V1 ), \"e\"), \"[\", 1)\no$V1<-as.numeric(o$V1)\ncolnames(o)[1] <- \"Level\"\n\n# Define names\no$Emotion<- rownames(o)\n\n# Make plot\nggplot(data=o, aes(x=Emotion, y=Level)) +\n  geom_bar(stat=\"identity\")\n\n#####################################################################\n# Define image source\nimg.url = 'https://assets.donaldjtrump.com/site/about_body_img_2.jpg'\n\n# Define Microsoft API URL to request data\nfaceURL = \"https://api.projectoxford.ai/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=true&returnFaceAttributes=age\"\n\n# Define access key (access key is available via: https://www.microsoft.com/cognitive-services/en-us/face-api)\nfaceKEY = 'ec851ed8ae194c8ab6b4c7ab0bd95a35'\n\n# Define image\nmybody = list(url = img.url)\n\n# Request data from Microsoft\nfaceResponse = POST(\n  url = faceURL, \n  content_type('application/json'), add_headers(.headers = c('Ocp-Apim-Subscription-Key' = faceKEY)),\n  body = mybody,\n  encode = 'json's\n)\n\n# Show request results (if Status=200, request is okay)\nfaceResponse\n\n# Reuqest results from face analysis\nObamaR = httr::content(faceResponse)[[1]]\n\n# Define results in data frame\nOR<-as.data.frame(as.matrix(ObamaR$faceLandmarks))\n\n# Make some transformation to data frame\nOR$V2 <- lapply(strsplit(as.character(OR$V1), \"\\\\=\"), \"[\", 2)\nOR$V2 <- lapply(strsplit(as.character(OR$V2), \"\\\\,\"), \"[\", 1)\ncolnames(OR)[2] <- \"X\"\nOR$X<-as.numeric(OR$X)\n\nOR$V3 <- lapply(strsplit(as.character(OR$V1), \"\\\\y = \"), \"[\", 2)\nOR$V3 <- lapply(strsplit(as.character(OR$V3), \"\\\\)\"), \"[\", 1)\ncolnames(OR)[3] <- \"Y\"\nOR$Y<-as.numeric(OR$Y)\n\nOR$V1<-NULL",
+    "created" : 1477481548135.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1455575714",
+    "id" : "1DAEE42D",
+    "lastKnownWriteTime" : 1477731378,
+    "path" : "~/R/face recognition/emotion recognition.R",
+    "project_path" : "emotion recognition.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

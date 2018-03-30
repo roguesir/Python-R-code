@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1477564972490.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FF64482E",
+    "lastKnownWriteTime" : 3474601020313567232,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "wngvf3i3kx",
+        "caption" : "ObamaR",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=ObamaR&cache_key=wngvf3i3kx",
+        "displayedObservations" : "1",
+        "environment" : "",
+        "object" : "ObamaR",
+        "totalObservations" : "1",
+        "variables" : "2"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
