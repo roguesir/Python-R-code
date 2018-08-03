@@ -16,10 +16,6 @@
 
 ![Result Pic](https://github.com/roguesir/Python-R-code/blob/master/Python-code/matplotlib_practice/draw_contours.png)
 
-- Draw mal_plot
-
-![Result Pic](https://github.com/roguesir/Python-R-code/blob/master/Python-code/matplotlib_practice/mal_plot.png)
-
 - Draw maltiplot
 
 ![Result Pic](https://github.com/roguesir/Python-R-code/blob/master/Python-code/matplotlib_practice/mal_plot.png)
