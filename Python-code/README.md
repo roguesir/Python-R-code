@@ -7,7 +7,9 @@ A note about the basic of python programming.
 
 #### [Python_basic](https://github.com/roguesir/Python-R-code/tree/master/Python-code/python_basic)
 
-Contained file read: csv, excel, txt, json et.al
+- file I/O: csv, excel, txt, json et.al
+
+- basic stat: compute diff, rate et.al
 
 #### [Keras_practice](https://github.com/roguesir/Python-R-code/tree/master/Python-code/keras_practice)
 
